@@ -25,6 +25,9 @@ var validateLocalStrategyPassword = function(password) {
  * User Schema
  */
 var UserSchema = new Schema({
+	groups: [
+		{type: mongoose.Schema.Types.ObjectId, ref:'Group'}
+	],
 	firstName: {
 		type: String,
 		trim: true,
